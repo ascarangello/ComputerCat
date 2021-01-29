@@ -35,4 +35,20 @@ public class MemHolder : MonoBehaviour
             heldMem = null;
         }
     }
+
+    public void insertMem()
+    {
+        if (heldMem != null)
+        {
+            heldMem = null;
+        }
+    }
+
+    public MemoryLogic.MemType getMemType()
+    {   if (heldMem == null)
+        {
+            return MemoryLogic.MemType.EMPTY;
+        }
+        return heldMem.GetComponent<MemoryLogic>().type;
+    }
 }
