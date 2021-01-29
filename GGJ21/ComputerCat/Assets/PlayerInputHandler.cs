@@ -11,6 +11,7 @@ public class PlayerInputHandler : MonoBehaviour
     
     private float horizontalInput = 0f;
     private bool jumping = false;
+    private bool dropMem = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,10 @@ public class PlayerInputHandler : MonoBehaviour
         {
             jumping = true;
         } 
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            dropMem = true;
+        }
         
     }
 
@@ -35,5 +40,10 @@ public class PlayerInputHandler : MonoBehaviour
         // Tell our controller to move with the specified inputs
         controller.Move(horizontalInput * Time.fixedDeltaTime, jumping);
         jumping = false;
+        if(dropMem)
+        {
+            dropMem = false;
+            GetComponent<MemHolder>().dropMem();
+        }
     }
 }
