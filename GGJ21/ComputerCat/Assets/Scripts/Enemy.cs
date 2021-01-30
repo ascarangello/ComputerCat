@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour
         wallCheck;
     [SerializeField]
     protected LayerMask whatIsGround;
+    [SerializeField]
+    protected LayerMask whatIsBoundary;
     //[SerializeField]
     //protected Vector2 knockbackSpeed;
 
@@ -53,6 +55,7 @@ public class Enemy : MonoBehaviour
         aliveRB = alive.GetComponent<Rigidbody2D>();
         aliveAnim = alive.GetComponent<Animator>();
         facingDirection = 1;
+        //SwitchEnemyState(State.PATROL);
     }
 
     // Update is called once per frame
@@ -82,7 +85,7 @@ public class Enemy : MonoBehaviour
     private void UpdatePatrolState()
     {
         groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
-        wallDetected = Physics2D.Raycast(wallCheck.position, alive.transform.right, wallCheckDistance, whatIsGround);
+        wallDetected = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsBoundary);
         //Debug.DrawRay(transform.position, transform.right);
         if (!groundDetected || wallDetected)
         {
@@ -169,6 +172,7 @@ public class Enemy : MonoBehaviour
 
     private void Flip()
     {
+        //Debug.Log("Flip!");
         facingDirection *= -1;
         alive.transform.Rotate(0.0f, 180.0f, 0.0f);
     }
