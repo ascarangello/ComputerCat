@@ -15,7 +15,6 @@ public class MemorySlotLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        platformToActivate.SetActive(false);
         interactText.SetActive(false);
     }
 
@@ -40,7 +39,7 @@ public class MemorySlotLogic : MonoBehaviour
                 filled = true;
                 GetComponent<SpriteRenderer>().sprite = spriteOnInsert;
                 interactText.SetActive(false);
-                platformToActivate.SetActive(true);
+                platformToActivate.GetComponent<MemPlatformLogic>().activate();
             }
             interact = false;
         }
