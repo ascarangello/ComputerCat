@@ -5,6 +5,9 @@ using UnityEngine;
 // Tutorial here: https://www.youtube.com/watch?v=K2SbThbGw6w
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
+    protected GameObject player;
+
     protected enum State
     {
         PATROL,
@@ -25,7 +28,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     protected Transform
         groundCheck,
-        wallCheck;
+        wallCheck,
+        playerCheck;
     [SerializeField]
     protected LayerMask whatIsGround;
     [SerializeField]
@@ -37,31 +41,33 @@ public class Enemy : MonoBehaviour
     //    currentHealth,
     //    knockbackStartTime;
     
-    protected int facingDirection;
+    protected int facingDirection = 1;
 
     protected Vector2 movement;
 
+    [SerializeField]
     protected bool
         groundDetected,
-        wallDetected;
+        wallDetected,
+        playerDetected;
 
     protected GameObject alive;
     protected Rigidbody2D aliveRB;
     protected Animator aliveAnim;
 
-    private void Start()
+    protected void Start()
     {
         alive = transform.Find("Alive").gameObject;
         aliveRB = alive.GetComponent<Rigidbody2D>();
         aliveAnim = alive.GetComponent<Animator>();
-        facingDirection = 1;
         //SwitchEnemyState(State.PATROL);
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch(currentState)
+        playerDetected = PlayerInRange();
+        switch (currentState)
         {
             case State.PATROL:
                 UpdatePatrolState();
@@ -76,21 +82,40 @@ public class Enemy : MonoBehaviour
     }
 
     //--PATROLLING STATE------------------------------------------------------------------------------------------------------
-    private void EnterPatrolState()
+    protected void EnterPatrolState()
     {
-        Debug.Log("Entered Patrol State!");
+        Debug.Log(name + " Entered Patrol State!");
+        currentState = State.PATROL;
         aliveAnim.SetBool("patrol", true);
     }
 
-    private void UpdatePatrolState()
+    protected void UpdatePatrolState()
+    {
+        if (playerDetected)
+        {
+            SwitchEnemyState(State.PURSUIT);
+        }
+        else
+        {
+            PatrolMovement();
+        }
+    }
+
+    protected void ExitPatrolState()
+    {
+        Debug.Log(name + " Exited Patrol State.");
+        aliveAnim.SetBool("patrol", false);
+    }
+
+    virtual protected void PatrolMovement()
     {
         groundDetected = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, whatIsGround);
-        wallDetected = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsBoundary);
+        wallDetected = Physics2D.Raycast(wallCheck.position, alive.transform.right, wallCheckDistance, whatIsBoundary);
         //Debug.DrawRay(transform.position, transform.right);
         if (!groundDetected || wallDetected)
         {
-            if (!groundDetected) { Debug.Log("No ground, turn around!"); }
-            if (wallDetected) { Debug.Log("Oops a wall, turn around!"); }
+            if (!groundDetected) { Debug.Log(name + ": No ground, turn around!"); }
+            if (wallDetected) { Debug.Log(name + ": Oops a wall, turn around!"); }
             Flip();
         }
         else
@@ -100,49 +125,52 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void ExitPatrolState()
-    {
-        Debug.Log("Exited Patrol State.");
-        aliveAnim.SetBool("patrol", false);
-    }
-
     //--PURSUIT STATE--------------------------------------------------------------------------------------------------------
-    private void EnterPursuitState()
+    protected void EnterPursuitState()
     {
-        Debug.Log("Entered Pursuit State!");
+        Debug.Log(name + " Entered Pursuit State!");
+        currentState = State.PURSUIT;
         aliveAnim.SetBool("pursuit", true);
     }
 
-    private void UpdatePursuitState()
+    protected void UpdatePursuitState()
     {
-
+        if (!playerDetected)
+        {
+            SwitchEnemyState(State.PATROL);
+        }
+        else
+        {
+            PatrolMovement();
+        }
     }
 
-    private void ExitPursuitState()
+    protected void ExitPursuitState()
     {
-        Debug.Log("Exited Pursuit State.");
+        Debug.Log(name + " Exited Pursuit State.");
         aliveAnim.SetBool("pursuit", false);
     }
 
     //--DEAD STATE-----------------------------------------------------------------------------------------------------------
-    private void EnterDeadState()
+    protected void EnterDeadState()
     {
-        Debug.Log("Entered Death State.");
+        Debug.Log(name + " Entered Death State.");
+        currentState = State.DEAD;
         aliveAnim.SetBool("death", true);
     }
 
-    private void UpdateDeadState()
+    protected void UpdateDeadState()
     {
         // Shouldn't need?
     }
 
-    private void ExitDeadState()
+    protected void ExitDeadState()
     {
         // Shouldn't need?
     }
 
     //--OTHER FUNCTIONS------------------------------------------------------------------------------------------------------
-    private void SwitchEnemyState(State newState)
+    protected void SwitchEnemyState(State newState)
     {
         switch(currentState)
         {
@@ -170,17 +198,22 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void Flip()
+    protected void Flip()
     {
         //Debug.Log("Flip!");
         facingDirection *= -1;
         alive.transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
-    private void OnDrawGizmos()
+    protected void OnDrawGizmos()
     {
         Gizmos.DrawLine(groundCheck.position, new Vector2(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
-        Gizmos.DrawLine(wallCheck.position, new Vector2(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
+        Gizmos.DrawLine(wallCheck.position, new Vector2(wallCheck.position.x + (wallCheckDistance * facingDirection), wallCheck.position.y));
+    }
+
+    protected bool PlayerInRange()
+    {
+        return playerCheck.GetComponent<Collider2D>().OverlapPoint(player.transform.position);
     }
 
     //private void Damage(float[] attackDetails)
