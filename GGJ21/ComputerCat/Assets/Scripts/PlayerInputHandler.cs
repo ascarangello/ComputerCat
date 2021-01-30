@@ -7,7 +7,7 @@ public class PlayerInputHandler : MonoBehaviour
     // CharController reference 
     public CharController controller;
     // Set ground movement speed
-    private float movementSpeed = 55f;
+    private float movementSpeed = 65f;
     
     private float horizontalInput = 0f;
     private bool jumping = false;
