@@ -29,6 +29,9 @@ TextureImporter:
   - first:
       213: -8144756953994291517
     second: null_jump_8
+  - first:
+      213: 4008888725181801618
+    second: null_jump_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -126,7 +129,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: null_jump_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 347
+        width: 171
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e492c6b05198bab10800000000000000
+      internalID: 1993837983520532814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: null_jump_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 347
+        width: 171
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba08091adb3db2ca0800000000000000
+      internalID: -6040501663774506837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: null_jump_2
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 388
+        width: 175
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb4c23a084b2ea60800000000000000
+      internalID: 7701916777343372224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: null_jump_3
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 349
+        width: 202
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d42a60742f8df0d0800000000000000
+      internalID: -3387393958045145897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: null_jump_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 201
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46af287bb155bed0800000000000000
+      internalID: -2398921360887798193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: null_jump_5
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 223
+        width: 175
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9c5a8459e8f8110800000000000000
+      internalID: 1265386792134494640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: null_jump_6
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 181
+        width: 172
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33534ff466b7f3b40800000000000000
+      internalID: 5422188155735651635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: null_jump_7
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 181
+        width: 171
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e123c25a1293a2290800000000000000
+      internalID: -7914450578482384354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: null_jump_8
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 387
+        width: 175
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6174ff3b208fe80800000000000000
+      internalID: -8144756953994291517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: null_jump_9
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 223
+        width: 173
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294a7883e0f62a730800000000000000
+      internalID: 4008888725181801618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

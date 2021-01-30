@@ -13,6 +13,7 @@ public class PlayerInputHandler : MonoBehaviour
     private float horizontalInput = 0f;
     private bool jumping = false;
     private bool dropMem = false;
+    private bool midJump = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,11 @@ public class PlayerInputHandler : MonoBehaviour
         {
             dropMem = true;
         }
+        if(midJump && controller.getYVelo() == 0.0f && controller.m_Grounded)
+        {
+            anim.SetTrigger("Land");
+            midJump = false;
+        }
         
     }
 
@@ -48,6 +54,12 @@ public class PlayerInputHandler : MonoBehaviour
         {
             walking = false;
             anim.SetBool("Walking", false);
+        }
+
+        if(jumping && controller.m_Grounded)
+        {
+            anim.SetTrigger("Jump");
+            midJump = true;
         }
         controller.Move(horizontalInput * Time.fixedDeltaTime, jumping);
         jumping = false;
