@@ -8,12 +8,31 @@ public class MemoryLogic : MonoBehaviour
 
     public MemType type;
     [SerializeField] private GameObject interactText;
+    public Color grayColor, blueColor, greenColor, redColor;
     private bool inRadius;
     private GameObject player;
     private bool take;
     // Start is called before the first frame update
     void Start()
     {
+        SpriteRenderer startingSprite = GetComponent<SpriteRenderer>();
+        switch (type)
+        {
+            case MemType.Gray:
+                startingSprite.color = grayColor;
+                break;
+            case MemType.Green:
+                startingSprite.color = greenColor;
+                break;
+            case MemType.Blue:
+                startingSprite.color = blueColor;
+                break;
+            case MemType.Red:
+                startingSprite.color = redColor;
+                break;
+
+
+        }
         interactText.SetActive(false);
     }
 

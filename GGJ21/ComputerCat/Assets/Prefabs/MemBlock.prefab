@@ -51,7 +51,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7462b817a6eb1e640811882d5b244b68, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,10 +91,10 @@ TextMesh:
   m_FontSize: 0
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 7462b817a6eb1e640811882d5b244b68, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
 --- !u!1 &1451994866294314895
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 1451994866294314894}
   - component: {fileID: 1451994866294314899}
   m_Layer: 0
-  m_Name: GreenMem
+  m_Name: MemBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,9 +121,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451994866294314895}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.007, y: 0.515, z: -7.0562215}
-  m_LocalScale: {x: 3.8341577, y: 0.44834906, z: 1.0994}
+  m_LocalScale: {x: 10.940257, y: 1.2793041, z: 3.136991}
   m_Children:
   - {fileID: 1451994865171331913}
   m_Father: {fileID: 0}
@@ -170,7 +170,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.10849059, g: 1, b: 0.18710011, a: 1}
+  m_Color: {r: 0.32156864, g: 0.36862746, b: 0.3254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -220,3 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   interactText: {fileID: 1451994865171331910}
+  grayColor: {r: 0.32156864, g: 0.36862746, b: 0.3254902, a: 1}
+  blueColor: {r: 0.09411765, g: 0.22352941, b: 0.8, a: 1}
+  greenColor: {r: 0.10980392, g: 1, b: 0.1882353, a: 1}
+  redColor: {r: 0.94509804, g: 0.03529412, b: 0.015686275, a: 1}
