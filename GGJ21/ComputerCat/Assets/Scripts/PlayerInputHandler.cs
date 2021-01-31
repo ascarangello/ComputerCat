@@ -9,6 +9,7 @@ public class PlayerInputHandler : MonoBehaviour
     // Set ground movement speed
     private float movementSpeed = 65f;
     private Animator anim;
+    public AudioSource footstep;
     private bool walking = false;
     private float horizontalInput = 0f;
     private bool jumping = false;
@@ -45,21 +46,30 @@ public class PlayerInputHandler : MonoBehaviour
     private void FixedUpdate()
     {
         // Tell our controller to move with the specified inputs
-        if (horizontalInput != 0.0 && walking == false)
+        if (horizontalInput != 0.0 && !walking)
         {
             walking = true;
             anim.SetBool("Walking", true);
+
         }
-        if (horizontalInput == 0.0 && walking == true)
+        if (horizontalInput == 0.0 && walking)
         {
             walking = false;
             anim.SetBool("Walking", false);
         }
-
         if(jumping && controller.m_Grounded)
         {
             anim.SetTrigger("Jump");
+            footstep.Stop();
             midJump = true;
+        }
+        if (controller.m_Grounded && walking && !footstep.isPlaying)
+        {
+            footstep.Play();
+        }
+        if(!walking && footstep.isPlaying || !controller.m_Grounded)
+        {
+            footstep.Stop();
         }
         controller.Move(horizontalInput * Time.fixedDeltaTime, jumping);
         jumping = false;
