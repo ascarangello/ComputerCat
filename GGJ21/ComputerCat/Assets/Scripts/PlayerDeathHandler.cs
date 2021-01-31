@@ -8,6 +8,7 @@ public class PlayerDeathHandler : MonoBehaviour
     private Animator anims;
     private Rigidbody2D rb;
     public AudioSource footsteps;
+    public AudioSource deathSound;
     public levelEnd loader;
 
     // Start is called before the first frame update
@@ -40,6 +41,11 @@ public class PlayerDeathHandler : MonoBehaviour
             }
 
             anims.SetTrigger("Sad");
+            if(!deathSound.isPlaying)
+            {
+                deathSound.Play();
+
+            }
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             StartCoroutine(loader.LoadLevel(SceneManager.GetActiveScene().buildIndex, true));
         }

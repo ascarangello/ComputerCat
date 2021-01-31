@@ -39,7 +39,7 @@ public class MemoryLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inRadius && Input.GetKeyDown(KeyCode.F))
+        if (inRadius && (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Z)))
         {
             take = true;
         }
