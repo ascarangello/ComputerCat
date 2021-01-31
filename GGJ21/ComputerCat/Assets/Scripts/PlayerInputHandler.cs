@@ -10,6 +10,7 @@ public class PlayerInputHandler : MonoBehaviour
     private float movementSpeed = 65f;
     private Animator anim;
     public AudioSource footstep;
+    public AudioSource jumpingSound;
     private bool walking = false;
     private float horizontalInput = 0f;
     private bool jumping = false;
@@ -38,6 +39,10 @@ public class PlayerInputHandler : MonoBehaviour
         if(midJump && controller.getYVelo() == 0.0f && controller.m_Grounded)
         {
             anim.SetTrigger("Land");
+            if(jumpingSound.isPlaying)
+            {
+                jumpingSound.Stop();
+            }
             midJump = false;
         }
         
@@ -62,6 +67,10 @@ public class PlayerInputHandler : MonoBehaviour
             anim.SetTrigger("Jump");
             footstep.Stop();
             midJump = true;
+        }
+        if(jumping && !jumpingSound.isPlaying)
+        {
+            jumpingSound.Play();
         }
         if (controller.m_Grounded && walking && !footstep.isPlaying)
         {
