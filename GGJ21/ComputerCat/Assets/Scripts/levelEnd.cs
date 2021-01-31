@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 // Followed another brackeys tutorial for this:
@@ -28,13 +29,17 @@ public class levelEnd : MonoBehaviour
         {
             GameObject player = collision.gameObject;
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1, false));
         }
     }
 
-    IEnumerator LoadLevel(int index)
+    public IEnumerator LoadLevel(int index, bool loadDeath)
     {
+
+        yield return new WaitForSeconds(1.0f);
+
         screenwipe.SetTrigger("LevelEnd");
+
 
         yield return new WaitForSeconds(transitionTime);
 
