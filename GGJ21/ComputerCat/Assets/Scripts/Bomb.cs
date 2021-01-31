@@ -10,15 +10,30 @@ public class Bomb : MonoBehaviour
         rotateMax = 40.0f;
     private float rotateSpeed;
 
+    private Animator anim;
+    private Rigidbody2D rb;
+
+
     // bomb temp asset from: https://cdn.iconscout.com/icon/free/png-512/winrar-3-569260.png
     private void Start()
     {
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
         Debug.Log("Bomb spawned!");
         rotateSpeed = Random.Range(rotateMin, rotateMax);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Bomb exploded!");
+        StartCoroutine(DestroyTimer());
+    }
+
+    IEnumerator DestroyTimer()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        transform.localRotation = Quaternion.identity;
+        anim.SetBool("explode", true);
+        yield return new WaitForSeconds(0.466f);
         Destroy(gameObject);
     }
 
