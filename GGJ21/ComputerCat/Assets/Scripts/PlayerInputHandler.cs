@@ -16,6 +16,7 @@ public class PlayerInputHandler : MonoBehaviour
     private bool jumping = false;
     private bool dropMem = false;
     private bool midJump = false;
+    private bool quit = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,11 +46,19 @@ public class PlayerInputHandler : MonoBehaviour
             }
             midJump = false;
         }
+
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            quit = true;
+        }
         
     }
 
     private void FixedUpdate()
     {
+        if(quit)
+        {
+            Application.Quit();
+        }
         // Tell our controller to move with the specified inputs
         if (horizontalInput != 0.0 && !walking)
         {
