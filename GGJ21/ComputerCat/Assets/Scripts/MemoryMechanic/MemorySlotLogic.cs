@@ -40,7 +40,7 @@ public class MemorySlotLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inRadius && !filled && Input.GetKeyDown(KeyCode.F))
+        if(inRadius && !filled && Input.GetKeyDown(KeyCode.Z))
         {
             interact = true;
         }
