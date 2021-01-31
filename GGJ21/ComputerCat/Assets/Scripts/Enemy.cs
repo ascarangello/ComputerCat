@@ -133,7 +133,7 @@ public class Enemy : MonoBehaviour
         aliveAnim.SetBool("pursuit", true);
     }
 
-    protected void UpdatePursuitState()
+    virtual protected void UpdatePursuitState()
     {
         if (!playerDetected)
         {

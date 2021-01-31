@@ -26,10 +26,10 @@ public class PlayerDeathHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Stinky");
+        Debug.Log(name + " has found a trigger collider!");
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Ouchy Wouchy!");
+            Debug.Log(name + " has collided with an enemy!");
             if (footsteps.isPlaying)
             {
                 footsteps.Stop();
