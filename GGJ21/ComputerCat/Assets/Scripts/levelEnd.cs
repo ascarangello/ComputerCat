@@ -36,7 +36,7 @@ public class levelEnd : MonoBehaviour
     public IEnumerator LoadLevel(int index, bool loadDeath)
     {
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
 
         screenwipe.SetTrigger("LevelEnd");
 

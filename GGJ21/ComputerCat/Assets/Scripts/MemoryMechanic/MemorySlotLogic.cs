@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static MemoryLogic;
 
 public class MemorySlotLogic : MonoBehaviour
 {
     public MemoryLogic.MemType thisType;
     public GameObject platformToActivate;
+    public Sprite Purple, Aqua, Orange, Magenta;
     [SerializeField] private GameObject interactText;
     private bool inRadius;
     private GameObject player;
@@ -15,6 +17,23 @@ public class MemorySlotLogic : MonoBehaviour
     void Start()
     {
         interactText.SetActive(false);
+        SpriteRenderer startingSprite = GetComponent<SpriteRenderer>();
+        switch (thisType)
+        {
+            case MemType.Purple:
+                startingSprite.sprite = Purple;
+                break;
+            case MemType.Aqua:
+                startingSprite.sprite = Aqua;
+                break;
+            case MemType.Orange:
+                startingSprite.sprite = Orange;
+                break;
+            case MemType.Magenta:
+                startingSprite.sprite = Magenta;
+                break;
+
+        }
     }
 
     // Update is called once per frame
@@ -36,7 +55,6 @@ public class MemorySlotLogic : MonoBehaviour
                 playerInv.insertMem();
                 interact = false;
                 filled = true;
-                // GetComponent<SpriteRenderer>().sprite = spriteOnInsert;
                 interactText.SetActive(false);
                 platformToActivate.GetComponent<MemPlatformLogic>().activate();
             }
