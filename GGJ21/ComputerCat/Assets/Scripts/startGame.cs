@@ -28,7 +28,7 @@ public class startGame : MonoBehaviour
 
     IEnumerator waitAndLoad()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(15.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
