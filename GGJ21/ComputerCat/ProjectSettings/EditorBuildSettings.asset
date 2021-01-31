@@ -15,12 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TonyLevels/TonyLevel 2.unity
     guid: 27fd8513bd840204298d8bbba7747ba6
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
     path: Assets/Scenes/TonyScene.unity
     guid: 82a3684ede96c5149969bc639e84cc29
   - enabled: 0
