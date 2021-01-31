@@ -9,30 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7f316cb8c3ede7544aa860988df5ac7c
   - enabled: 1
-    path: Assets/Scenes/BaseLevel.unity
-    guid: 3ae33d6a5f7e40b4ca10f8dcce6130f2
-  - enabled: 1
-    path: Assets/Scenes/TonyLevels/TonyLevel 2.unity
-    guid: 27fd8513bd840204298d8bbba7747ba6
-  - enabled: 0
-    path: Assets/Scenes/TonyScene.unity
-    guid: 82a3684ede96c5149969bc639e84cc29
-  - enabled: 0
-    path: Assets/Scenes/SceneLoadingTest.unity
-    guid: 2ce654bab5356e04ba5240ee27e854df
-  - enabled: 0
-    path: Assets/Scenes/TonyLevels/TonyLevel 1.unity
-    guid: f5cd74adecc54e548affd644a9501998
-  - enabled: 1
     path: Assets/Scenes/LiamLevels/LiamLevel1.unity
     guid: ff81c9c04a77631429070bf8e03db186
   - enabled: 1
     path: Assets/Scenes/LiamLevels/LiamLevel2.unity
     guid: fd01747b89a411a469caabae65791877
   - enabled: 1
+    path: Assets/Scenes/TonyLevels/TonyLevel 1.unity
+    guid: f5cd74adecc54e548affd644a9501998
+  - enabled: 1
     path: Assets/Scenes/LiamLevels/LiamLevel3.unity
     guid: ef5e14f2cae1b4a48bc9e6f832673804
   - enabled: 1
     path: Assets/Scenes/LiamLevels/LiamLevel4.unity
     guid: ed7f7f387fb7d84429269c95f535f7f3
+  - enabled: 1
+    path: Assets/Scenes/TonyLevels/TonyLevel 2.unity
+    guid: 27fd8513bd840204298d8bbba7747ba6
   m_configObjects: {}
