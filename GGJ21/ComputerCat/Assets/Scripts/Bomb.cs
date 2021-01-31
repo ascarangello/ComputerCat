@@ -12,6 +12,7 @@ public class Bomb : MonoBehaviour
 
     private Animator anim;
     private Rigidbody2D rb;
+    private AudioSource explosion;
 
 
     // bomb temp asset from: https://cdn.iconscout.com/icon/free/png-512/winrar-3-569260.png
@@ -19,6 +20,7 @@ public class Bomb : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        explosion = GetComponent<AudioSource>();
         Debug.Log("Bomb spawned!");
         rotateSpeed = Random.Range(rotateMin, rotateMax);
     }
@@ -33,6 +35,7 @@ public class Bomb : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         transform.localRotation = Quaternion.identity;
         anim.SetBool("explode", true);
+        explosion.Play();
         yield return new WaitForSeconds(0.466f);
         Destroy(gameObject);
     }
