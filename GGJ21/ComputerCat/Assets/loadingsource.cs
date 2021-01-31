@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class loadingsource : MonoBehaviour
 {
-    private Animator anim;
+
     private void Awake()
     {
 
