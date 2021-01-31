@@ -8,7 +8,7 @@ public class loadingsource : MonoBehaviour
     private Animator anim;
     private void Awake()
     {
-        anim.SetBool("loadDeath", WhyLoading.loadDeath);
+
     }
 
     // Start is called before the first frame update
