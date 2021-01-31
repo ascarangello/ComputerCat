@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MemoryLogic : MonoBehaviour
 {
-    public enum MemType { Gray, Blue, Green, Red, EMPTY };
+    public enum MemType { Purple, Orange, Aqua, Magenta, EMPTY };
 
     public MemType type;
     [SerializeField] private GameObject interactText;
-    public Color grayColor, blueColor, greenColor, redColor;
+    public Sprite Purple, Aqua, Orange, Magenta;
     private bool inRadius;
     private GameObject player;
     private bool take;
@@ -18,17 +18,17 @@ public class MemoryLogic : MonoBehaviour
         SpriteRenderer startingSprite = GetComponent<SpriteRenderer>();
         switch (type)
         {
-            case MemType.Gray:
-                startingSprite.color = grayColor;
+            case MemType.Purple:
+                startingSprite.sprite = Purple;
                 break;
-            case MemType.Green:
-                startingSprite.color = greenColor;
+            case MemType.Aqua:
+                startingSprite.sprite = Aqua;
                 break;
-            case MemType.Blue:
-                startingSprite.color = blueColor;
+            case MemType.Orange:
+                startingSprite.sprite = Orange;
                 break;
-            case MemType.Red:
-                startingSprite.color = redColor;
+            case MemType.Magenta:
+                startingSprite.sprite = Magenta;
                 break;
 
 

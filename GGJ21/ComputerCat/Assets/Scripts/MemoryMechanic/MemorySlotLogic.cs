@@ -5,7 +5,6 @@ using UnityEngine;
 public class MemorySlotLogic : MonoBehaviour
 {
     public MemoryLogic.MemType thisType;
-    public Sprite spriteOnInsert;
     public GameObject platformToActivate;
     [SerializeField] private GameObject interactText;
     private bool inRadius;
@@ -37,7 +36,7 @@ public class MemorySlotLogic : MonoBehaviour
                 playerInv.insertMem();
                 interact = false;
                 filled = true;
-                GetComponent<SpriteRenderer>().sprite = spriteOnInsert;
+                // GetComponent<SpriteRenderer>().sprite = spriteOnInsert;
                 interactText.SetActive(false);
                 platformToActivate.GetComponent<MemPlatformLogic>().activate();
             }
