@@ -12771,6 +12771,10 @@ PrefabInstance:
       propertyPath: loader
       value: 
       objectReference: {fileID: 1367750766}
+    - target: {fileID: 595109554, guid: 18346a451cca5394e8c2f3d9b3f7cb78, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6334914815280900288, guid: 18346a451cca5394e8c2f3d9b3f7cb78,
         type: 3}
       propertyPath: m_Name
@@ -12853,7 +12857,7 @@ PrefabInstance:
     - target: {fileID: 8382716307561891652, guid: 3bec33475e2590c4e996140900811b27,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.27
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 8382716307561891652, guid: 3bec33475e2590c4e996140900811b27,
         type: 3}
