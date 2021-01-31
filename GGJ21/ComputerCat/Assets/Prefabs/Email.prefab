@@ -175,7 +175,7 @@ MonoBehaviour:
   bombPrefab: {fileID: 6996853603265845604, guid: 06dc9522bbd5d9f44876c89b0e3e31f9,
     type: 3}
   bombSpawnPoint: {fileID: 2059885241444844649}
-  attackInterval: 2
+  attackInterval: 3
 --- !u!1 &3862240526524840124
 GameObject:
   m_ObjectHideFlags: 0
