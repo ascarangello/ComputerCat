@@ -14,7 +14,7 @@ public class AIMGuy : Enemy
         {
             PatrolMovement();
             Vector2 toTarget = (player.transform.position - transform.position).normalized;
-            if (Vector2.Dot(toTarget, transform.forward) < 0)
+            if (Vector2.Dot(toTarget, alive.transform.right) < 0)
             {
                 Debug.Log("Player got behind " + name + ", flip!");
                 Flip();
