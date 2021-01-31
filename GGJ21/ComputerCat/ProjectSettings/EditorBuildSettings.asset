@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LiamLevels/LiamLevel3.unity
     guid: ef5e14f2cae1b4a48bc9e6f832673804
   - enabled: 1
+    path: Assets/Scenes/Jamie Levels/JamieLEvel1.unity
+    guid: f708e916883395d41b044d8bc0e569e4
+  - enabled: 1
     path: Assets/Scenes/LiamLevels/LiamLevel4.unity
     guid: ed7f7f387fb7d84429269c95f535f7f3
   - enabled: 1
