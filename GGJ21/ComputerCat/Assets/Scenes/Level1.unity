@@ -5296,6 +5296,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1508595045235759821, guid: e521ac269d6bbef44b14758e5c186aab,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 496310508}
     - target: {fileID: 6746475615509987184, guid: e521ac269d6bbef44b14758e5c186aab,
         type: 3}
       propertyPath: m_Name
