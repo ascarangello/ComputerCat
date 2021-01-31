@@ -24,10 +24,12 @@ public class PlayerDeathHandler : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Stinky");
         if(collision.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("Ouchy Wouchy!");
             if (footsteps.isPlaying)
             {
                 footsteps.Stop();
