@@ -26,6 +26,8 @@ public class levelEnd : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            GameObject player = collision.gameObject;
+            player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         }
     }
