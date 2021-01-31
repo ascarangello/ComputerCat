@@ -221,4 +221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisType: 3
   platformToActivate: {fileID: 0}
+  Purple: {fileID: -8749431085743821477, guid: 3564f0e694b3fee4c82bf744625e9ec8, type: 3}
+  Aqua: {fileID: -8749431085743821477, guid: 3564f0e694b3fee4c82bf744625e9ec8, type: 3}
+  Orange: {fileID: -8749431085743821477, guid: 3564f0e694b3fee4c82bf744625e9ec8, type: 3}
+  Magenta: {fileID: -8749431085743821477, guid: 3564f0e694b3fee4c82bf744625e9ec8,
+    type: 3}
   interactText: {fileID: 8382716306044899941}
