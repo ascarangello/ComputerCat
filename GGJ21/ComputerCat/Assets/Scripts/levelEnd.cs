@@ -11,6 +11,7 @@ public class levelEnd : MonoBehaviour
 {
     public Animator screenwipe;
     public float transitionTime = 1f;
+    public AudioSource nextLevelSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,10 @@ public class levelEnd : MonoBehaviour
         {
             GameObject player = collision.gameObject;
             player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            if(!nextLevelSound.isPlaying)
+            {
+                nextLevelSound.Play();
+            }
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1, false));
         }
     }
