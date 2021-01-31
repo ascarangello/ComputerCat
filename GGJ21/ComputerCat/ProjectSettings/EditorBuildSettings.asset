@@ -17,13 +17,25 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TonyScene.unity
     guid: 82a3684ede96c5149969bc639e84cc29
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneLoadingTest.unity
     guid: 2ce654bab5356e04ba5240ee27e854df
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TonyLevels/TonyLevel 1.unity
     guid: f5cd74adecc54e548affd644a9501998
+  - enabled: 1
+    path: Assets/Scenes/LiamLevels/LiamLevel1.unity
+    guid: ff81c9c04a77631429070bf8e03db186
+  - enabled: 1
+    path: Assets/Scenes/LiamLevels/LiamLevel2.unity
+    guid: fd01747b89a411a469caabae65791877
+  - enabled: 1
+    path: Assets/Scenes/LiamLevels/LiamLevel3.unity
+    guid: ef5e14f2cae1b4a48bc9e6f832673804
+  - enabled: 1
+    path: Assets/Scenes/LiamLevels/LiamLevel4.unity
+    guid: ed7f7f387fb7d84429269c95f535f7f3
   m_configObjects: {}
