@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8382716306044899941}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.391, z: 0}
+  m_LocalPosition: {x: 0, y: 1.291, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1.0993999}
   m_Children: []
   m_Father: {fileID: 8382716307561891652}
@@ -83,7 +83,7 @@ TextMesh:
   m_GameObject: {fileID: 8382716306044899941}
   m_Text: Z to insert memory
   m_OffsetZ: 0
-  m_CharacterSize: 0.05
+  m_CharacterSize: 0.2
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
@@ -121,9 +121,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8382716307561891649}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.29, y: -7.62, z: 0}
-  m_LocalScale: {x: 7.795, y: 7.795, z: 7.795}
+  m_LocalScale: {x: 1.902, y: 1.902, z: 14.82609}
   m_Children:
   - {fileID: 8382716306044899946}
   m_Father: {fileID: 0}
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8749431085743821477, guid: 3564f0e694b3fee4c82bf744625e9ec8,
+  m_Sprite: {fileID: 7416661691934193716, guid: 3f189ed61b4c4734080db6623b292132,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -194,18 +194,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.22491512}
+  m_Offset: {x: 0.003700614, y: -0.006580591}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.1, y: 0.61}
+    oldSize: {x: 0.8125, y: 1.8125}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14, y: 0.16142052}
+  m_Size: {x: 0.82830834, y: 1.8118815}
   m_EdgeRadius: 0
 --- !u!114 &8382716307561891653
 MonoBehaviour:
@@ -221,9 +221,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisType: 3
   platformToActivate: {fileID: 0}
-  Purple: {fileID: -8749431085743821477, guid: 3564f0e694b3fee4c82bf744625e9ec8, type: 3}
-  Aqua: {fileID: -8749431085743821477, guid: 3564f0e694b3fee4c82bf744625e9ec8, type: 3}
-  Orange: {fileID: -8749431085743821477, guid: 3564f0e694b3fee4c82bf744625e9ec8, type: 3}
-  Magenta: {fileID: -8749431085743821477, guid: 3564f0e694b3fee4c82bf744625e9ec8,
+  Purple: {fileID: 7416661691934193716, guid: 3f189ed61b4c4734080db6623b292132, type: 3}
+  Aqua: {fileID: 6737341240549615931, guid: 3f189ed61b4c4734080db6623b292132, type: 3}
+  Orange: {fileID: -1892526329776257188, guid: 3f189ed61b4c4734080db6623b292132, type: 3}
+  Magenta: {fileID: -3255483476546598199, guid: 3f189ed61b4c4734080db6623b292132,
+    type: 3}
+  AfterPurple: {fileID: -3800775274735648555, guid: 3f189ed61b4c4734080db6623b292132,
+    type: 3}
+  AfterAqua: {fileID: 1235236159741850946, guid: 3f189ed61b4c4734080db6623b292132,
+    type: 3}
+  AfterOrange: {fileID: -1562484019352871375, guid: 3f189ed61b4c4734080db6623b292132,
+    type: 3}
+  AfterMagenta: {fileID: -3893995735470998333, guid: 3f189ed61b4c4734080db6623b292132,
     type: 3}
   interactText: {fileID: 8382716306044899941}

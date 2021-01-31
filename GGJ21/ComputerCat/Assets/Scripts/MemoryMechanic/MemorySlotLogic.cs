@@ -8,6 +8,7 @@ public class MemorySlotLogic : MonoBehaviour
     public MemoryLogic.MemType thisType;
     public GameObject platformToActivate;
     public Sprite Purple, Aqua, Orange, Magenta;
+    public Sprite AfterPurple, AfterAqua, AfterOrange, AfterMagenta;
     [SerializeField] private GameObject interactText;
     private bool inRadius;
     private GameObject player;
@@ -57,6 +58,23 @@ public class MemorySlotLogic : MonoBehaviour
                 filled = true;
                 interactText.SetActive(false);
                 platformToActivate.GetComponent<MemPlatformLogic>().activate();
+                SpriteRenderer startingSprite = GetComponent<SpriteRenderer>();
+                switch (thisType)
+                {
+                    case MemType.Purple:
+                        startingSprite.sprite = AfterPurple;
+                        break;
+                    case MemType.Aqua:
+                        startingSprite.sprite = AfterAqua;
+                        break;
+                    case MemType.Orange:
+                        startingSprite.sprite = AfterOrange;
+                        break;
+                    case MemType.Magenta:
+                        startingSprite.sprite = AfterMagenta;
+                        break;
+
+                }
             }
             interact = false;
         }
